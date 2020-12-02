@@ -7,5 +7,13 @@ exports.servController = async (req, res)  =>{
         pagina: 'Publicaciones',
         userServ: userServ
     });
-    
+    /*if(res.status(500)){
+        res.send('Mal');
+        /*
+    }else{
+        res.send('Bien');
+       /res.render('404',{
+            pagina: 'Not Found'
+        });
+    } */
 }

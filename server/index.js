@@ -61,6 +61,7 @@ app.use((req, res, next) =>{
     next();
 });
 
+
 // habilitar pug
 app.set('view engine', 'pug');
 
@@ -85,6 +86,7 @@ app.use((req, res, next) =>{
 
 // cargar las rutas
 app.use('/', routes());
+
 
 /*Puerto y host para la app */
 const host = process.env.HOST || '0.0.0.0';

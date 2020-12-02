@@ -4,9 +4,9 @@ block contenido
       .box1
         .overview-serv
           nav.cat-subcat
-            a(href="#") #{userServ[0].nom_cat}
+            a(href=`/categorias/${userServ[0].nom_cat}`) #{userServ[0].nom_cat}
             i.fas.fa-angle-right
-            a(href="#") #{userServ[0].nom_scat}
+            a(href=`/categorias/${userServ[0].nom_cat}/${userServ[0].nom_scat}`) #{userServ[0].nom_scat}
           h1 #{userServ[0].titulo}
           .overview-profile
             label.profile-pict(for="profile_image" style="width: 32px; height: 32px; font-size: 1em;")

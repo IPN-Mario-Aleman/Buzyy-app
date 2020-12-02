@@ -1,0 +1,24 @@
+doctype html
+html(lang="en" dir="ltr")
+  head
+    link(rel="stylesheet" href="/css/404.css")
+    meta(charset="utf-8")
+    title 404
+  body
+    #container
+      .content
+        h2 404
+        h4 Opps! Página no encontrada.
+        p
+          | Parece que ha habido un error con la página que estabas buscando. 
+          br
+          |           Es posible que la entrada haya sido eliminada o que la dirección no exista.
+        a(href="/") Volver al inicio.
+    script(type="text/javascript").
+      var container = document.getElementById('container');
+      window.onmousemove = function(e){
+      var x = - e.clientX/5;
+      y = - e.clientY/5;
+      container.style.backgroundPositionX = x + 'px';
+      container.style.backgroundPositionY = y + 'px';
+      }

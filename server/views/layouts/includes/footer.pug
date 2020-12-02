@@ -119,10 +119,10 @@ footer
       .copyright
         .container
           p.copy
-            | © Copyright 
+            | ©  
             script(type="text/javascript").
               document.write(new Date().getFullYear());
-            |  Todos los derechos reservados
+            |  Created By Mario Aleman - Todos los derechos reservados
 script(src="/js/jquery-3.3.1.min.js")
 
 script(type="text/javascript").
@@ -141,12 +141,7 @@ script(src="/js/jquery-3.1.0.min.js")
 script(src="/js/bootstrap.min.js")
 script(src="/js/main.js")
 
-script(type="text/javascript").
-  if(window.location.pathname === "/carrito"){
-    var script = document.createElement('script');
-    script.src = '/js/localstorage.js';
-    document.write(script.outerHTML);
-  }
+
   
 script(src="/js/jquery.js")
 script(src="/js/jquery.slicebox.js")
@@ -200,3 +195,18 @@ script(type="text/javascript").
     script.src = '/js/subcategorias.js';
     document.write(script.outerHTML);
   }
+
+script(type="text/javascript").
+  if(window.location.pathname === "/carrito"){
+    var script = document.createElement('script');
+    script.src = '/js/localstorage.js';
+    document.write(script.outerHTML);
+  }
+script(type="text/javascript").
+  $(window).scroll(function(){
+    var sticky = $('.submenu'),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= 1) sticky.addClass('unfix');
+    else sticky.removeClass('unfix');
+  });

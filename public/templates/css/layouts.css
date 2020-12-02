@@ -152,12 +152,126 @@ header div ul.nav{
 }
 
 .logo-img{
-  width: 275px;
-  height: 110px;
-  background-image: url(../img/logo/Logo.png);
-  background: cover;
-  background-repeat: no-repeat;
-  background-size: 270px;
+  width: 169px;
+  height: 80px;
+  margin-top: -30px;
+  margin-bottom: 7px;
+}
+
+.box_search{
+  height: 28px;
+  width: 250px;
+  margin-bottom: 32px;;
+}
+.container-buscador{
+  display: block;
+}
+input.search{
+  position: relative !important;
+  display: none !important;
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 8px 31px 8px 5px;
+  margin-top: -6px;
+  border: none !important;
+  width: 0px !important;
+
+  background-size: 19px;
+}
+.i-close-btn{
+  width: 37px;
+  margin-left: 390px;
+  background: #f0f8ff00;
+  cursor: pointer;
+}
+input.search.active{
+  display: grid !important;
+  left: 427px;
+  bottom: 39px;
+  width: 20px !important;
+  cursor: pointer;
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 4px 31px 3px 5px;
+  margin-top: 2px;
+  background: #404040 url("../../img/icons/searchwhite.png") no-repeat 9px center;
+  background-size: 19px;
+}
+input.search:hover.active{
+  background: #757575 url("../../img/icons/searchwhite.png") no-repeat 9px center;
+  background-size: 19px;
+}
+
+input.src{
+  padding: 5px 10px 5px 28px;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  background: #292929 url("../../img/icons/searchwhite.png") no-repeat 9px center;
+  background-size: 18px;
+  width: 0px;
+  transition: all .5s;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  display: grid;
+  margin-left: 180px;
+  position: relative;
+  margin-top: -62px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #c3c1c1b3;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #c3c1c1b3;
+   opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #c3c1c1b3;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #c3c1c1b3;
+}
+.close-btn{
+  cursor: pointer;
+  display: none !important;
+  font-size: 25px;
+  margin-top: -37px;
+  padding: 6px 10px 6px 10px;
+  background: #404040;
+  transition: all .3s ease-in-out;
+  width: 37px;
+}
+.close-btn:hover{
+  background: #757575;
+  width: 37px;
+}
+i.close-btn.active{
+  display: block !important;
+}
+.fa-times:before{
+  color: #f1f1f1 !important;
+}
+
+
+.src::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: -1;
+}
+input.src.active{
+  padding: 5px 10px 5px 15px !important;
+  width: 210px;
+  background-color: #4a4a4ab3;;
+  cursor: auto;
+  background: #4a4a4ab3;
 }
 
 header div ul.nav{
@@ -165,7 +279,8 @@ header div ul.nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 645px;
+  margin-left: 751px;
+  width: 1000px;
 }
 header div ul.nav li{
   position: relative;
@@ -283,7 +398,7 @@ header > nav#contenedor_nav > div.navegacion > ul > li:hover a{
 }
 header > nav#contenedor_nav > div.navegacion > ul > li > .submenu{
   background: #fff;
-  padding: 40px;
+  padding: 15px;
   position: fixed;
   left: 0;
   width: 100%;
@@ -294,13 +409,13 @@ header > nav#contenedor_nav > div.navegacion > ul > li > .submenu{
 header > nav#contenedor_nav > div.navegacion > ul > li:hover > .submenu{
     display: flex;
     background: rgba(18,89,155,1);
-background: -moz-linear-gradient(left, rgba(18,89,155,1) 0%, rgba(16,70,132,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(18,89,155,1)), color-stop(100%, rgba(16,70,132,1)));
-background: -webkit-linear-gradient(left, rgba(18,89,155,1) 0%, rgba(16,70,132,1) 100%);
-background: -o-linear-gradient(left, rgba(18,89,155,1) 0%, rgba(16,70,132,1) 100%);
-background: -ms-linear-gradient(left, rgba(18,89,155,1) 0%, rgba(16,70,132,1) 100%);
-background: linear-gradient(to right, rgba(18,89,155,1) 0%, rgba(16,70,132,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12599b', endColorstr='#104684', GradientType=1 );
+    background: -moz-linear-gradient(left, rgb(34, 66, 211) 0%, rgb(52, 142, 194) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgb(38, 64, 211)), color-stop(100%, rgb(52, 142, 194)));
+    background: -webkit-linear-gradient(left, rgb(42, 75, 224) 0%, rgb(52, 142, 194) 100%);
+    background: -o-linear-gradient(left, rgb(30, 79, 214) 0%, rgb(52, 142, 194) 100%);
+    background: -ms-linear-gradient(left, rgb(43, 102, 228) 0%, rgba(52, 142, 194, 0.89) 100%);
+    background: linear-gradient(to right, rgb(30, 111, 187) 0%, rgba(52, 142, 194, 0.925) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12599b', endColorstr='#104684', GradientType=1 );
     margin-top: 0px;
 }
 header > nav#contenedor_nav > div.navegacion > ul > li > .submenu > .submenu-items{
@@ -321,16 +436,16 @@ header > nav#contenedor_nav > div.navegacion > ul > li > .submenu > .submenu-ite
 header > nav#contenedor_nav > div.navegacion > ul > li > .submenu > .submenu-items > ul > li > a:hover {
   /*box-shadow:*/
   background: rgba(11,52,91,1);
-  background: -moz-linear-gradient(left, rgb(14, 67, 117) 0%, rgb(14, 66, 124) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgb(17, 77, 134)), color-stop(100%, rgb(13, 59, 112)));
-  background: -webkit-linear-gradient(left, rgb(15, 69, 119) 0%, rgb(14, 62, 117) 100%);
-  background: -o-linear-gradient(left, rgb(15, 68, 117) 0%, rgb(16, 70, 133) 100%);
-  background: -ms-linear-gradient(left, rgb(14, 67, 117) 0%, rgb(15, 65, 122) 100%);
-  background: linear-gradient(to right, rgb(15, 69, 119) 0%, rgb(15, 66, 124) 100%);
+  background: -moz-linear-gradient(left, rgb(53, 56, 58) 0%, rgb(53, 56, 58) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgb(53, 56, 58)), color-stop(100%, rgb(13, 59, 112)));
+  background: -webkit-linear-gradient(left, rgb(53, 56, 58) 0%, rgb(53, 56, 58) 100%);
+  background: -o-linear-gradient(left, rgb(53, 56, 58) 0%, rgb(53, 56, 58) 100%);
+  background: -ms-linear-gradient(left, rgb(53, 56, 58) 0%, rgb(53, 56, 58) 100%);
+  background: linear-gradient(to right, rgb(53, 56, 58) 0%, rgb(53, 56, 58) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b345b', endColorstr='#09294e', GradientType=1 );
-  -webkit-box-shadow: 0px 0px 10px 1px rgb(14, 67, 117);
-  -moz-box-shadow: 0px 0px 10px 1px rgb(14, 67, 117);
-  box-shadow: 0px 0px 10px 1px rgb(14, 67, 117);
+  -webkit-box-shadow: 0px 0px 10px 1px rgb(23, 34, 44);
+  -moz-box-shadow: 0px 0px 10px 1px rgb(12, 27, 41);
+  box-shadow: 0px 0px 10px 1px rgb(20, 34, 48);
 }
 header > nav#contenedor_nav > div.navegacion > ul > li > .submenu > .submenu-items > ul > li > a > div{
   color: white;
@@ -728,13 +843,14 @@ h1{
     color: #1a2537;
     font-size: 40px;
 }
+/*
 input[type="text"],
 input[type="password"]{
     font-size: 20px;
     width: 100%;
     padding: 10px;
     border: none;
-}
+}*/
 .input-contenedor{
     margin-bottom: 15px;
     border: 1px solid #aaa;
@@ -792,7 +908,7 @@ h1 {
 	  padding: 3%;
     position: relative;
 }
-
+/*
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"], textarea {
     width: 100%;
     height: 35px;
@@ -821,7 +937,7 @@ input[type="submit"], input[type="button"], input[type="reset"] {
 input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover {
 	opacity: .8;
 }
-
+*/
 
 .divider {
   display: flex;

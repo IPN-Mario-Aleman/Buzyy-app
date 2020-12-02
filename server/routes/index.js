@@ -19,11 +19,23 @@ const servControllers = require('../controllers/servController');
 
 
 module.exports = function(){
+    
     router.get('/', homeController.homController);
     
+    router.get('/usuarios', (req, res)=>{
+        const newArray = [];
+        newArray[0] = {
+            id: 1,
+            nombre: "Mario",
+            edad: 18
+        } 
+        res.send(newArray);
+    })
+
     router.get('/perfil', isLoggedIn, async (req, res)=>{
         const telefonos = await pool.query('SELECT * FROM telefonos WHERE id_user = ?',[req.user.id]);
-        console.log(telefonos); 
+        console.log(telefonos);
+
         res.render('miperfil/',{
             pagina: 'MyProfile',
             telefonos
@@ -316,5 +328,12 @@ module.exports = function(){
         res.redirect('/login');
     });
     
+    router.use(function(req, res, next){
+        if(res.status(404)){
+            res.render('404',{
+                pagina: 'Not Found'
+            })
+        }
+    });
     return router;
 }

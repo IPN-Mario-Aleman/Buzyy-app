@@ -36,10 +36,11 @@ div.contenedor > div.subcategorias{
 .container_cat .card_cat{
   position: relative;
   height: 250px;
-  background: #fff;
+  background: rgba(104, 101, 107, 0.774);
   display: flex;
   width: 30%;
   margin: 30px 0;
+  color: #fff;
 }
 
 .container_cat .card_cat .imgBx{
@@ -63,7 +64,7 @@ div.contenedor > div.subcategorias{
   left: -75px;
   top: calc(50% - 75px);
   transition: 0.5s ease-in-out;
-  background: #ff0057;
+  background: #0c7e6f00;
 }
 
 .container_cat .card_cat .imgBx:before{
@@ -73,13 +74,21 @@ div.contenedor > div.subcategorias{
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 3.5em;
-  color: rgba(255, 255, 255, 0.05);
+  font-size: 2.7em;
+  color: rgb(255, 255, 255);
+  background-color: rgba(65, 59, 71, 0.685);
   font-weight: 700;
+  transition: 1s ease-in-out;
+}
+
+.container_cat .card_cat:hover .imgBx:before{
+  color: rgba(41, 124, 145, 0.0);
+  background-color: rgba(29, 38, 172, 0.0);
+  transition: 0.5s ease-in-out;
 }
 
 .container_cat .card_cat .imgBx img{
-  max-width: 300px;
+  max-width: 450px;
   transition: 0.5s ease-in-out;
 }
 

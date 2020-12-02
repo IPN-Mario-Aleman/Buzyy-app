@@ -8,12 +8,12 @@ block contenido
         each categorias in cats
           .card_cat
             .imgBx(data-text=categorias.nom_scat)
-              img(src="img-cat/photoshop.png" alt="png")
+              img(src=`../img/cat_scat/scat/${categorias.img_scat}` alt="png")
             .content_cat
               div
                 h3=categorias.nom_scat
                 p=categorias.desc_scat
-                a(href="#") Read More
+                a(href=`/categorias/${categorias.nom_cat}/${categorias.nom_scat}`) Read More
     section
       div
         svg.wave(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320")
