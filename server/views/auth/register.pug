@@ -45,6 +45,7 @@ html(lang="en" dir="ltr")
                 input#passlg(type="password" name="password" required="required" value=password)
                 span.text Contraseña
                 span.line
+                span#passstrength
                 #toggle(onclick="showHide();")
           .row100
             .col
@@ -59,6 +60,10 @@ html(lang="en" dir="ltr")
       span Ha ocurrido un error en el registro, intentelo de nuevo
     .correcto
       span Felicidades se ha registrado correctamente
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+    script(src="js/password.js")
     script(src="js/jquery-3.3.1.min.js")
     script(src="js/regjson.js")
     //script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous")
@@ -104,4 +109,3 @@ html(lang="en" dir="ltr")
       toggle.classList.remove('hide');
       }
       }
-    
